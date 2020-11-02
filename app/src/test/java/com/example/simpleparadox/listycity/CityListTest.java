@@ -44,6 +44,7 @@ class CityListTest {
     }
         */
 
+    //pass test case
     @Test
     void testGetCities(){
         CityList cityList = mockCityList();
