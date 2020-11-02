@@ -28,7 +28,7 @@ class CityListTest {
         assertEquals(2, cityList.countCities());
         assertTrue(cityList.hasCity(new City("Regina", "Saskatchewan")));
     }
-
+    /* Failed Test
     @Test
     void testGetCities(){
         CityList cityList = mockCityList();
@@ -41,6 +41,19 @@ class CityListTest {
         assertEquals(0,city.compareTo(cityList.getCities().get(0)));
         assertEquals(0,mockCity().compareTo(cityList.getCities().get(1)));
     }
+    */
 
+    //Passed Failed Test
+    @Test
+    void testGetCities(){
+        CityList cityList = mockCityList();
 
+        assertEquals(0,mockCity().compareTo(cityList.getCities().get(0)));
+
+        City city   = new City("Charlottetown","Prince Edward Island");
+        cityList.add(city);
+
+        assertEquals(0,city.compareTo(cityList.getCities().get(0)));
+        assertEquals(0,mockCity().compareTo(cityList.getCities().get(1)));
+    }
 }
